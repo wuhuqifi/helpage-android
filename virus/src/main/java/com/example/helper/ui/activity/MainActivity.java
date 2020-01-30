@@ -31,7 +31,6 @@ import com.example.helper.ui.fragments.Fragment_device;
 import com.example.helper.ui.fragments.Fragment_watch;
 
 public class MainActivity extends BaseActivity implements KeyEvent.Callback {
-
     private ImageView mMenu;
     private ImageView mPlus;
     private TextView tv_bar_title;
@@ -42,6 +41,7 @@ public class MainActivity extends BaseActivity implements KeyEvent.Callback {
     private Fragment mFragDevice;
     private Fragment mFragWatch;
     private Fragment mFragMy;
+    private Fragment mCurrentFrag;
     private FragmentManager mManager;
 
     @Override
@@ -51,7 +51,7 @@ public class MainActivity extends BaseActivity implements KeyEvent.Callback {
         mFragDevice = new Fragment_device();
         mFragWatch = new Fragment_watch();
         mFragMy = new Fragment_my();
-
+        mCurrentFrag = mFragDevice;
     }
 
     protected int getLayoutID() {
@@ -69,7 +69,7 @@ public class MainActivity extends BaseActivity implements KeyEvent.Callback {
         mDrawerLayout = findViewById(R.id.drawer);
 
         //第一次进入时显示主界面
-        showFragment(mFragContainer.getId(),mFragDevice);
+        switchFragment(mFragContainer.getId(),mFragDevice);
         tv_bar_title.setText("设备配网");
 
     }
@@ -79,15 +79,15 @@ public class MainActivity extends BaseActivity implements KeyEvent.Callback {
         mBottomNavigationView.setOnNavigationItemSelectedListener( menuItem -> {
             switch (menuItem.getItemId()){
                 case R.id.bot_navi_item_1:
-                    showFragment(mFragContainer.getId(),mFragDevice);
+                    switchFragment(mFragContainer.getId(),mFragDevice);
                     tv_bar_title.setText("设备配网");
                     return true;
                 case R.id.bot_navi_item_2:
-                    showFragment(mFragContainer.getId(),mFragWatch);
+                    switchFragment(mFragContainer.getId(),mFragWatch);
                     tv_bar_title.setText("实时信息");
                     return true;
                 case R.id.bot_navi_item_3:
-                    showFragment(mFragContainer.getId(),mFragMy);
+                    switchFragment(mFragContainer.getId(),mFragMy);
                     tv_bar_title.setText("个人设置");
                     return true;
             }
@@ -100,21 +100,28 @@ public class MainActivity extends BaseActivity implements KeyEvent.Callback {
             }
         );
         //toolbar menu监听
-        mMenu.setOnClickListener(v -> {
-            mDrawerLayout.openDrawer(Gravity.LEFT);
-        });
+        mMenu.setOnClickListener(v -> mDrawerLayout.openDrawer(Gravity.LEFT));
     }
 
     /*
-     * 使用替换方法，将需要显示的Fragment显示出来
+     * 使用add方法，将需要显示的Fragment显示出来
      * 第一个参数是显示fragment的布局
      * 第二个参数是要显示fragment
      * */
-    private void showFragment(int fragment_container_id,Fragment fragment){
-         FragmentTransaction transaction;
-         transaction= mManager.beginTransaction();        //开启事务
-         transaction.replace(fragment_container_id, fragment);
-         transaction.commit();//提交事务
+    private void switchFragment(int fragment_container_id,Fragment fragment){
+        FragmentTransaction transaction;
+        transaction= mManager.beginTransaction();        //开启事务
+        if (fragment.isAdded()){
+            transaction.hide(mCurrentFrag);
+            transaction.show(fragment);
+            mCurrentFrag = fragment;
+        }else {//避免内存泄漏
+            transaction.hide(mCurrentFrag);
+            transaction.add(fragment_container_id, fragment);
+            transaction.show(fragment);
+            mCurrentFrag = fragment;
+        }
+        transaction.commit();//提交事务
     }
 
     @Override
