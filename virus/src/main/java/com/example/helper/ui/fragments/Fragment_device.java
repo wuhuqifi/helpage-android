@@ -33,6 +33,18 @@ public class Fragment_device extends BaseFragment implements IFreshDev {
     private TextView mState;
 
     @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.e("WANG", "onDestroy");
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        Log.e("WANG", "onDetach");
+    }
+
+    @Override
     protected void initData() {
         Log.e("WANG", "onCreate");
         //自动和UI主线程Looper关联
@@ -66,6 +78,7 @@ public class Fragment_device extends BaseFragment implements IFreshDev {
             Intent intent = new Intent(getActivity(), DevInfoActivity.class);
             startActivity(intent);
         });
+        mLogo.setOnClickListener(v -> mPreDev.freshDev());//手动更新设备在线没
     }
 
     @Override
