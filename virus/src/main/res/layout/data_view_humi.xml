@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<app:com.example.helper.widget.DataView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/padding_left"
+    android:lines="2"
+    android:lineSpacingExtra="20sp"
+    android:paddingTop="@dimen/padding_top"
+    android:text="湿度\n67.7%"
+    android:textSize="@dimen/text_size"
+    android:textColor="@color/text"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_weight="1"
+    android:layout_margin="20dp"
+    app:WHQUnit="%"
+    app:WHQCornerSize="@dimen/corner_size"
+    app:WHQNumber="25"
+    app:WHQTextBackground="@color/text_background"
+    app:bitmap="@drawable/humidity" />

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.example.helper.widget.CornerTextView
+                style="@style/BlueCornerText"
+                android:text="智能助老装置"
+                android:textSize="@dimen/big_text"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <include layout="@layout/data_view_temp"/>
+                <include layout="@layout/data_view_humi"/>
+            </LinearLayout>
+            <include layout="@layout/drug"/>
+            <include layout="@layout/sleep"/>
+            <include layout="@layout/brush"/>
+
+            <TextView
+                android:id="@+id/tv_camera"
+                android:textSize="@dimen/big_text"
+                android:text="打开摄像头"
+                android:background="@color/text_background"
+                android:textColor="@color/textGreen"
+                android:gravity="center"
+                android:layout_marginVertical="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/marginAll"
+                    android:textSize="100sp"
+                    android:text="@string/app_name"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:textSize="100sp"
+                    android:layout_margin="@dimen/marginAll"
+                    android:text="@string/app_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+</RelativeLayout>

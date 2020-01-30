@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="@string/bot_navi_menu_1"
+        android:id="@+id/bot_navi_item_1"
+        android:icon="@mipmap/service" />
+    <item
+        android:title="@string/bot_navi_menu_2"
+        android:id="@+id/bot_navi_item_2"
+        android:icon="@mipmap/watcher" />
+    <item
+        android:title="@string/bot_navi_menu_3"
+        android:id="@+id/bot_navi_item_3"
+        android:icon="@mipmap/person" />
+</menu>

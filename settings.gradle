@@ -1,0 +1,3 @@
+//默认在当前目录找同名文件夹,否则需要具体指定路径
+include ':virus'
+//project(':virus').projectDir = new File('virus')

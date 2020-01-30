@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--圆角文本框 -->
+    <declare-styleable name="CornerTextView">
+        <attr name="cornerSize" format="dimension"/>
+        <attr name="textBackground" format="color"/>
+    </declare-styleable>
+    <!--圆角提醒 -->
+    <declare-styleable name="CornerToggleView">
+        <attr name="CTVcornerSize" format="dimension"/>
+        <attr name="CTVbackground" format="color"/>
+        <attr name="CTVbuttonON" format="reference"/>
+        <attr name="CTVbuttonOFF" format="reference"/>
+    </declare-styleable>
+
+    <!--温湿度View-->
+    <declare-styleable name="DataView">
+        <attr name="WHQCornerSize" format="dimension"/>
+        <attr name="WHQTextBackground" format="color"/>
+        <attr name="bitmap" format="reference"/>
+        <attr name="WHQNumber" format="string"/>
+        <attr name="WHQUnit" format="string"/>
+    </declare-styleable>
+
+    <!--圆角icon -->
+    <declare-styleable name="IconImgView">
+        <attr name="IIVcornerSize" format="dimension"/>
+        <attr name="IIVtextBackground" format="color"/>
+        <attr name="IIVicon" format="reference"/>
+    </declare-styleable>
+
+    <!--圆角icon -->
+    <declare-styleable name="ToogleView">
+        <attr name="TVcornerSize" format="dimension"/>
+        <attr name="TVbackground" format="color"/>
+        <attr name="TVicon" format="reference"/>
+        <attr name="TVbutton" format="reference"/>
+        <attr name="TVtext" format="string"/>
+        <attr name="TVtextSize" format="dimension"/>
+        <attr name="TVtextColor" format="color"/>
+    </declare-styleable>
+
+</resources>

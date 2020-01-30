@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--base:基本数据设备-->
+<!--video:视频设备-->
+<config>
+    <base>
+        <devices_url>http://api.heclouds.com/devices</devices_url>
+        <master_key>yVoa2=3t7c61aQOurpXYxSOZMls=</master_key>
+        <device_id>582307500</device_id>
+    </base>
+    <video>
+        <master_key>M0M1m2zdiVDhzQmBYp=RBuLlwxQ=</master_key>
+        <device_id>583012656</device_id>
+        <channel_id>1</channel_id>
+        <!--0:RTMP 1:HLS 2:HTTPS-HLS-->
+        <play_protocol>0</play_protocol>
+        <!--超清 高清 标清-->
+        <play_level>3</play_level>
+    </video>
+</config>
