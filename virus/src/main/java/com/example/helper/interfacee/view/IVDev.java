@@ -4,7 +4,7 @@ import android.os.Handler;
 
 import com.example.helper.beans.Device;
 
-public interface IFreshDev {
+public interface IVDev {
     Device getDevice();
     Handler getHandler();
     void fresh(String name, String ID, boolean isOnline);

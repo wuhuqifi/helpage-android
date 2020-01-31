@@ -1,5 +1,5 @@
 package com.example.helper.base;
 
-public interface IView {
-     void fresh();
+public interface IView<T> {
+     void fresh(T t);
 }

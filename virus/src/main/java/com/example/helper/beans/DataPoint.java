@@ -5,30 +5,29 @@ import org.json.JSONObject;
 
 public class DataPoint {
     private String id;
-    private Object current_value;//String Int JsonObject
+    private String current_value;//String Int JsonObject
     private String update_at;
     String unit;
     String unit_symbol;
-    DataPoint(String id){
-        this.id = id;
-        current_value = null;
-        update_at =null;
+    public DataPoint(){
     }
     public void parseDataPoint(String Json){
         try {
             JSONObject jsonObject = new JSONObject(Json);
-            this.id = jsonObject.getString("id");
-            this.update_at = jsonObject.getString("update_at");
-            try {
-                this.current_value = jsonObject.get("current_value");//可能找不到
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-        } catch (Exception e) {
+            parseDataPoint(jsonObject);
+        } catch (JSONException e) {
             e.printStackTrace();
         }
     }
-
+    public void parseDataPoint(JSONObject jsonObject){
+        try {
+            this.id = jsonObject.getString("id");
+            this.update_at = jsonObject.getString("update_at");
+            this.current_value = jsonObject.getString("current_value");//可能找不到
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
     public String getId() {
         return id;
     }
@@ -41,8 +40,8 @@ public class DataPoint {
         return current_value;
     }
 
-    public void setCurrent_value(Object current_value) {
-        this.current_value = current_value;
+    public void setCurrent_value(String current_value) {
+        this.current_value = (String) current_value;
     }
 
     public String getUpdate_at() {

@@ -2,10 +2,9 @@ package com.example.helper.model;
 
 import android.util.Log;
 
-import com.CustemApp;
 import com.example.helper.beans.Device;
-import com.example.helper.interfacee.model.IDevice;
-import com.example.helper.interfacee.presenter.IPreDev;
+import com.example.helper.interfacee.model.IMDev;
+import com.example.helper.interfacee.presenter.IPDev;
 import com.example.helper.utils.ConfigManager;
 import com.example.helper.utils.NetProxy;
 
@@ -18,10 +17,10 @@ import okhttp3.Callback;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class DeviceManager implements IDevice {
+public class DeviceManager implements IMDev {
 
     @Override
-    public void getDevice(Device device, IPreDev.CallBack callBack) {
+    public void getDevice(Device device, IPDev.CallBack callBack) {
         Request request = new Request.Builder()
                 .url(ConfigManager.base.devices_url + "/" + device.ID)
                 .method("GET",null)
@@ -36,6 +35,28 @@ public class DeviceManager implements IDevice {
             @Override
             public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
                 callBack.onSucces(response.body().string());
+            }
+        });
+    }
+
+    @Override
+    public void login(Device device, IPDev.CallBack callBack) {
+        Request request = new Request.Builder()
+                .url("http://mqtt.heclouds.com" )
+                .method("GET",null)
+                .header("ClientIdentifier",ConfigManager.base.device_id)
+                .header("UserName",ConfigManager.base.product_id)
+                .header("UserPassword",ConfigManager.base.master_key)
+                .build();
+        NetProxy.Companion.doRequest(request, new Callback() {
+            @Override
+            public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                Log.e("WANG", e.toString());
+            }
+
+            @Override
+            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                Log.e("WANG", response.body().string());
             }
         });
     }

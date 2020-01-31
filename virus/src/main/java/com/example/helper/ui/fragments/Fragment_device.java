@@ -11,21 +11,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.helper.R;
 import com.example.helper.base.BaseFragment;
 import com.example.helper.beans.Device;
-import com.example.helper.interfacee.view.IFreshDev;
-import com.example.helper.interfacee.presenter.IPreDev;
+import com.example.helper.interfacee.view.IVDev;
+import com.example.helper.interfacee.presenter.IPDev;
 import com.example.helper.presenter.PreDev;
 import com.example.helper.ui.activity.DevInfoActivity;
 
 
-
-public class Fragment_device extends BaseFragment implements IFreshDev {
+public class Fragment_device extends BaseFragment implements IVDev {
     private Device mDevice;//轮椅
-    private IPreDev mPreDev;//presenter
+    private IPDev mPreDev;//presenter
     private Handler mHandler;
     private ImageView mLogo;
     private TextView mName;
@@ -49,7 +47,7 @@ public class Fragment_device extends BaseFragment implements IFreshDev {
         Log.e("WANG", "onCreate");
         //自动和UI主线程Looper关联
         mHandler = new Handler();
-        mDevice = new Device("582307500","BnmwMdeApAZcy1Hk=CvLrB71otg=");
+        mDevice = new Device("582307500","BnmwMdeApAZcy1Hk=CvLrB71otg=", "Oy9yltofYBvUWrh9");
         mPreDev = new PreDev(this);
         mPreDev.freshDev();
     }
@@ -79,12 +77,13 @@ public class Fragment_device extends BaseFragment implements IFreshDev {
             startActivity(intent);
         });
         mLogo.setOnClickListener(v -> mPreDev.freshDev());//手动更新设备在线没
+       // mName.setOnClickListener(v -> mPreDev.login());
     }
 
     @Override
     public void fresh(String name, String ID, boolean isOnline) {
         mName.setText(name);
-        mID.setText(ID);
+        mID.setText("ID:"+ID);
         if (isOnline) mState.setText("在线");
         else mState.setText("离线");
     }

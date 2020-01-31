@@ -1,7 +1,7 @@
 package com.example.helper.base;
 
-public interface IPresenter<T> {
-    void attatchView(T view);
+public interface IPresenter<V> {
+    void attatchView(V view);
     void disAttatchView();
     boolean isAttatchedView();
 }

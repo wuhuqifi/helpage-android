@@ -11,12 +11,14 @@ import java.util.List;
 public class Device {
     public String ID;
     public String apiKey;
+    public String reg_code;
     public String name;//title
     public Boolean isOnline;
     public List<String> dataStreamsID = new ArrayList<>();
-    public Device(String ID,String apiKey){
+    public Device(String ID,String apiKey,String reg_code){
         this.ID = ID;
         this.apiKey = apiKey;
+        this.reg_code = reg_code;
     };
     //TODO
     public void parseDeviseFromJSON(String JsonString) {

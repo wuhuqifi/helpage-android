@@ -11,9 +11,16 @@ import java.io.InputStream;
 
 public class ConfigManager {
     public static class base{
+        public static String datastream_url = "http://api.heclouds.com/devices/582307500/datastreams";
         public static String devices_url = "http://api.heclouds.com/devices";
         public static String master_key = "yVoa2=3t7c61aQOurpXYxSOZMls=";
+        public static String access_key = "DoJymtHrpq+3OY87eKATU38sRIjJaSJovZg9lWPBeLM=";
+        public static String api_key = "A13PYmB=V3jmt7cI2m9czRtpUmE=";
         public static String device_id = "582307500";
+        //登陆参数
+        public static String register_url = "http://api.heclouds.com/register_de";
+        public static String register_code = "Oy9yltofYBvUWrh9";
+        public static String product_id = "313858";
     }
     public static class video{
         public static String master_key = "M0M1m2zdiVDhzQmBYp=RBuLlwxQ=";
