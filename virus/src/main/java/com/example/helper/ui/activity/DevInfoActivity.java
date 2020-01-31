@@ -47,6 +47,8 @@ public class DevInfoActivity extends BaseActivity implements IVDS{
         mIPDS.fresh();
     }
 
+
+    
     @Override
     public void fresh(DataStreams dataStreams) {
         mTextView.setTextSize(20);
