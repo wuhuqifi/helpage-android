@@ -30,6 +30,7 @@ public class IRequestDef {
     }
 
     public static final class IRequestUrlDef {
-        public static String API_URL = "";
+        //本来是由R.raw.config初始化的，为了方便就直接替换了
+        public static String API_URL = "https://api.heclouds.com/ipc/video";
     }
 }

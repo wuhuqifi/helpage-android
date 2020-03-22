@@ -37,6 +37,9 @@ public class DataPoint {
     }
 
     public Object getCurrent_value() {
+        if (current_value == null) {
+            return "null";
+        }
         return current_value;
     }
 

@@ -8,8 +8,21 @@
     <color name="frag_back">#ffffff</color>
     <color name="left_navi_back">#64b5f6</color>
 
-    <color name="text">#222222</color>
+    <color name="text">#ff222222</color>
+    <color name="desc">#ffaaaaaa</color>
     <color name="textBlue">#1565c0</color>
     <color name="textGreen">#43a047</color>
     <color name="text_background">#eeeeee</color>
+
+    <color name="colorNormalLine">#33000000</color>
+    <color name="colorActivatedLine">#FF1BBBFF</color>
+    <color name="colorText0">#FF5A6169</color>
+    <color name="colorText1">#4C000000</color>
+    <color name="colorText3">#ff1a1a1a</color>
+    <color name="colorText4">#ff8f959b</color>
+    <color name="colorText5">#cc000000</color>
+    <color name="colorBtn0">#4CC6CACE</color>
+    <color name="colorLine0">#26000000</color>
+    <color name="fakeAppleBack">#f5f6fa</color>
+    <color name="fakeAppleBackWhite">#f5f6fa</color>
 </resources>

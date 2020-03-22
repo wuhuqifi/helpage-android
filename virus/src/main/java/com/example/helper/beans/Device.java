@@ -20,7 +20,7 @@ public class Device {
         this.apiKey = apiKey;
         this.reg_code = reg_code;
     };
-    //TODO
+
     public void parseDeviseFromJSON(String JsonString) {
         try {
             JSONObject jo = new JSONObject(JsonString);
@@ -36,7 +36,7 @@ public class Device {
             e.printStackTrace();
         }
     }
-    //TODO
+
     @Override
     public String toString() {
         return "Device{" +

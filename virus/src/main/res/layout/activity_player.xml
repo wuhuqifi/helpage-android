@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="11dp"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorText5"
                 android:textSize="11dp"
                 android:text="@string/screenshot_name"/>
         </LinearLayout>
@@ -52,7 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="11dp"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorText5"
                 android:textSize="11dp"
                 android:text="@string/microphone_name"/>
         </LinearLayout>

@@ -1,6 +1,7 @@
 package com.ont.player.sample.network;
 
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.ont.player.sample.def.IApiListener;
 import com.ont.player.sample.def.IDataListener;
@@ -55,7 +56,7 @@ public class PlayUrlRequest extends OntPlayerRequest {
                 LogUtil.i(TAG, "response:" + response);
 
                 if (!success) {
-
+                    Log.e("WANG", "result:" + response);
                     request_listener.onComplete(IRequestDef.IRequestResultDef.ERR_NETWORK, 0, response);
                     return;
                 }
@@ -101,6 +102,7 @@ public class PlayUrlRequest extends OntPlayerRequest {
                             }
 
                             LogUtil.i(TAG, "result:" + addr);
+                            Log.e("WANG", "result:" + addr);
                             if(null != request_listener) {
                                 request_listener.onComplete(IRequestDef.IRequestResultDef.ERR_OK, 0, addr);
                             }

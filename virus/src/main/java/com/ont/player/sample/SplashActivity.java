@@ -11,7 +11,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.helper.R;
-import com.ont.media.player.BuildConfig;
 
 /**
  * Created by betali on 2018/9/13.
@@ -27,11 +26,11 @@ public class SplashActivity extends AppCompatActivity {
         AlphaAnimation alphaAnimation = new AlphaAnimation(0.1f, 1.0f);
         alphaAnimation.setDuration(1000);//设置动画播放时长1000毫秒（1秒）
 
-       // LinearLayout layoutSplash = findViewById(R.id.layout_root);
+        //LinearLayout layoutSplash = findViewById(R.id.layout_root);
         //layoutSplash.startAnimation(alphaAnimation);
 
         //TextView version = findViewById(R.id.text_version);
-       // version.setText(version.getText() + BuildConfig.VERSION_NAME);
+        //version.setText(version.getText() + BuildConfig.VERSION_NAME);
 
         //设置动画监听
         alphaAnimation.setAnimationListener(new Animation.AnimationListener() {

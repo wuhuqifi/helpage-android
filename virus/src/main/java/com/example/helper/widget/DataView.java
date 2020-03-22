@@ -11,14 +11,18 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.view.View;
 
 import com.example.helper.R;
+import com.example.helper.ui.CustemApp;
 
-public class DataView extends android.support.v7.widget.AppCompatTextView {
+public class DataView extends View {
     //属性
     private float mWHQCornerSize;//圆角大小
     private int mWHQTextBackground;//背景颜色
-    private Bitmap mBitmap;//左侧图片
+    private String mWHQTitle;//
+    private Bitmap mWHQBitmap;//左侧图片
     private String mWHQNumber = "-1";//数据
     private String mWHQUnit = "U";//单位
     //
@@ -43,8 +47,9 @@ public class DataView extends android.support.v7.widget.AppCompatTextView {
         TypedArray typedArray = context.getTheme().
                 obtainStyledAttributes(attrs, R.styleable.DataView,defStyleAttr,0);
 
-        int res = typedArray.getResourceId(R.styleable.DataView_bitmap,R.drawable.dog);//默认值是狗
-        mBitmap = BitmapFactory.decodeResource(getResources(),res);
+        int res = typedArray.getResourceId(R.styleable.DataView_WHQBitmap,R.drawable.dog);//默认值是狗
+        mWHQBitmap = BitmapFactory.decodeResource(getResources(),res);
+        mWHQTitle = typedArray.getString(R.styleable.DataView_WHQTitle);
         mWHQNumber = typedArray.getString(R.styleable.DataView_WHQNumber);
         mWHQUnit = typedArray.getString(R.styleable.DataView_WHQUnit);
         mWHQCornerSize = typedArray.getDimensionPixelSize(R.styleable.DataView_WHQCornerSize,5);
@@ -56,39 +61,41 @@ public class DataView extends android.support.v7.widget.AppCompatTextView {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        int wMode = MeasureSpec.getMode(widthMeasureSpec);
-        int hMode = MeasureSpec.getMode(heightMeasureSpec);
-        int w = MeasureSpec.getSize(widthMeasureSpec);
-        int h = MeasureSpec.getSize(heightMeasureSpec);
-        switch (wMode){
-            case MeasureSpec.AT_MOST://wrap_content
-                break;
-            case MeasureSpec.EXACTLY://match_parent 10dp etc
-                break;
-            case MeasureSpec.UNSPECIFIED:
-                break;
-        }
-        switch (hMode){
-            case MeasureSpec.AT_MOST:
-                break;
-            case MeasureSpec.EXACTLY:
-                break;
-            case MeasureSpec.UNSPECIFIED:
-                break;
-        }
-        setMeasuredDimension(w,h);
+        mHeight = getMeasuredHeight();
+        mWidth = getMeasuredWidth();
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
-        mWidth = getWidth();
-        mHeight = getHeight();
         //画圆角矩形
         drawCornerRect(canvas);
         //画图像
         drawIcon(canvas);
-        //TODO 画数据
-        super.onDraw(canvas);
+        //画文字
+        drawText(canvas);
+    }
+
+    private void drawText(Canvas canvas) {
+        float paddingToRight = mWidth * 0.1f;
+        Paint titlePaint = new Paint();
+        titlePaint.setStrokeWidth(1);
+        titlePaint.setColor(0xdf222222);
+        titlePaint.setTextSize(mHeight / 4);
+        titlePaint.setTextAlign(Paint.Align.RIGHT);
+        titlePaint.setTypeface(CustemApp.gTypeface);
+
+        Paint descPaint = new Paint(titlePaint);
+        descPaint.setTextSize(mHeight / 5);
+
+        float titleHeight = titlePaint.getFontMetrics().descent - titlePaint.getFontMetrics().ascent;
+        //文字中心相当于基线的偏移 +
+        float titleOffset = titleHeight / 2 - titlePaint.getFontMetrics().descent;
+        float descHeight = descPaint.getFontMetrics().descent - descPaint.getFontMetrics().ascent;
+        float descOffset = descHeight / 2 - descPaint.getFontMetrics().descent;
+
+        canvas.drawText(mWHQTitle, mWidth - paddingToRight, mHeight / 3 + titleOffset, titlePaint);
+        canvas.drawText(mWHQNumber + mWHQUnit, mWidth - paddingToRight, 2*mHeight / 3 + descOffset, titlePaint);
+
     }
 
     private void drawCornerRect(Canvas canvas){
@@ -100,10 +107,14 @@ public class DataView extends android.support.v7.widget.AppCompatTextView {
     }
     private void drawIcon(Canvas canvas){
         Matrix matrix = new Matrix();
-        float sy = (float) ((mHeight*2/3.0)/mBitmap.getHeight());//view高度的2/3
+        float sy = (float) ((mHeight*2/3.0)/mWHQBitmap.getHeight());//view高度的2/3
         //float sx = (float) ((mHeight*1/3.0)/mBitmap.getWidth());//view宽度的1/3
         matrix.setScale(sy,sy);
-        Bitmap bitmap = Bitmap.createBitmap(mBitmap,0,0,mBitmap.getWidth(),mBitmap.getHeight(),matrix,false);
+        Bitmap bitmap = Bitmap.createBitmap(mWHQBitmap,0,0,mWHQBitmap.getWidth(),mWHQBitmap.getHeight(),matrix,false);
         canvas.drawBitmap(bitmap,0,mHeight/6,new Paint());//从1/6处开始画
+    }
+
+    public void setNumber(String data) {
+        mWHQNumber = data;
     }
 }

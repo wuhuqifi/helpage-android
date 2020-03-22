@@ -2,15 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:title="@string/bot_navi_menu_1"
+        android:title="通知"
         android:id="@+id/left_navi_item_1"
-        android:icon="@mipmap/service" />
+        android:icon="@mipmap/notify" />
     <item
-        android:title="@string/bot_navi_menu_2"
+        android:title="关于"
         android:id="@+id/left_navi_item_2"
-        android:icon="@mipmap/watcher" />
+        android:icon="@mipmap/about" />
     <item
-        android:title="@string/bot_navi_menu_3"
+        android:title="夜间"
         android:id="@+id/left_navi_item_3"
-        android:icon="@mipmap/person" />
+        android:icon="@mipmap/night" />
+    <item
+        android:title="语言"
+        android:id="@+id/left_navi_item_4"
+        android:icon="@mipmap/language" />
 </menu>

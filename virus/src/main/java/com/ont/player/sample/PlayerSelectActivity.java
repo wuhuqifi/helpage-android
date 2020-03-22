@@ -19,7 +19,7 @@ public class PlayerSelectActivity extends AppCompatActivity {
     public static final String CHANNEL_ID = "channel_id";
     public static final String API_KEY = "api_key";
 
-    private final int PAGE_LIVE = 1;//和mPageType默认值为0区别
+    private final int PAGE_LIVE = 1;
     private final int PAGE_HISTORY = 2;
 
     private TextView mTextPageName;
@@ -39,16 +39,15 @@ public class PlayerSelectActivity extends AppCompatActivity {
         mDeviceEntryInfo.mApiKey = intent.getStringExtra(API_KEY);
         mDeviceEntryInfo.mChannelId = intent.getStringExtra(CHANNEL_ID);
         mDeviceEntryInfo.mDeviceId = intent.getStringExtra(DEVICE_ID);
-        //为什么不用fragment？？？？？？？
+
         mLivePage = new LivePage(this);
-        //将请求播放地址的参数传入子view 既然对子view来说是必要的，为啥不用构造函数的形式，而用注入的方式？？？？
         mLivePage.setDeviceEntryInfo(mDeviceEntryInfo);
         mHistoryPage = new HistoryPage(this);
         mHistoryPage.setDeviceEntryInfo(mDeviceEntryInfo);
         changePageType();
 
         FrameLayout mChildPage = findViewById(R.id.child_page);
-        mChildPage.addView(mLivePage);//此时有一个是被隐藏的，只会显示一个
+        mChildPage.addView(mLivePage);
         mChildPage.addView(mHistoryPage);
 
         mTextPageName = findViewById(R.id.text_page_name);
@@ -87,17 +86,19 @@ public class PlayerSelectActivity extends AppCompatActivity {
             mHistoryPage.setVisibility(View.GONE);
             mTextPageName.setText(getResources().getString(R.string.page_live));
         } else {
-            //第一次 这样就不用设置标志位 np
+
             mPageType = PAGE_LIVE;
             mLivePage.setVisibility(View.VISIBLE);
             mHistoryPage.setVisibility(View.GONE);
         }
     }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+
        if (PermissionUtils.checkAndRequestPermission(this, PermissionUtils.PERMISSIONS_STORAGE, PermissionUtils.PERMISSIONS_STORAGE_CODE)) {
 
-            mHistoryPage.updateData(1);//更新本地视频 view
+            mHistoryPage.updateData(1);
        }
     }
 }

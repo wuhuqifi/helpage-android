@@ -17,7 +17,7 @@
             android:layout_marginTop="19dp"
             android:paddingLeft="7dp"
             android:textSize="14dp"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/color_black0"
             android:text="@string/player_protocol"
             android:background="@drawable/text_background_0"/>
 
@@ -41,7 +41,7 @@
                 android:drawableLeft="@drawable/checkbox_button_background"
                 android:drawablePadding="11dp"
                 android:textSize="13dp"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorText0"
                 android:text="rtmp"/>
 
             <RadioButton
@@ -56,7 +56,7 @@
                 android:drawableLeft="@drawable/checkbox_button_background"
                 android:drawablePadding="11dp"
                 android:textSize="13dp"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorText0"
                 android:text="hls"/>
 
             <RadioButton
@@ -71,7 +71,7 @@
                 android:drawableLeft="@drawable/checkbox_button_background"
                 android:drawablePadding="11dp"
                 android:textSize="13dp"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorText0"
                 android:text="https-hls"/>
         </RadioGroup>
 
@@ -81,7 +81,7 @@
             android:layout_marginTop="36dp"
             android:paddingLeft="7dp"
             android:textSize="14dp"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/color_black0"
             android:text="@string/player_get_url0"
             android:background="@drawable/text_background_0"/>
 
@@ -110,7 +110,7 @@
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp"
                 android:textSize="12dp"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorActivatedLine"
                 android:text="@string/player_get_url1"
                 android:background="@drawable/btn_background_1"/>
         </FrameLayout>
@@ -121,7 +121,7 @@
             android:layout_marginTop="26dp"
             android:paddingLeft="7dp"
             android:textSize="14dp"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/color_black0"
             android:text="@string/player_level"
             android:background="@drawable/text_background_0"/>
 
@@ -143,7 +143,7 @@
                 android:drawableLeft="@drawable/checkbox_button_background"
                 android:drawablePadding="11dp"
                 android:textSize="13dp"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorText0"
                 android:text="@string/player_level_4"/>
 
             <RadioButton
@@ -159,7 +159,7 @@
                 android:drawableLeft="@drawable/checkbox_button_background"
                 android:drawablePadding="11dp"
                 android:textSize="13dp"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorText0"
                 android:text="@string/player_level_3"/>
 
             <RadioButton
@@ -174,7 +174,7 @@
                 android:drawableLeft="@drawable/checkbox_button_background"
                 android:drawablePadding="11dp"
                 android:textSize="13dp"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorText0"
                 android:text="@string/player_level_2"/>
         </RadioGroup>
     </LinearLayout>

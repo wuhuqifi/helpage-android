@@ -40,7 +40,7 @@ public class NetTest {
                 System.out.println(s);
             }
         });
-        //TODO
+        //
         //单元测试不支持多线程
         try {
             Thread.sleep(3000);
@@ -72,7 +72,7 @@ public class NetTest {
                 System.out.println(s);
             }
         });
-        //TODO
+        //
         //单元测试不支持多线程
         try {
             Thread.sleep(3000);

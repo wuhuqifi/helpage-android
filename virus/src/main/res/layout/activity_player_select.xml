@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/color_black0"
             android:textSize="17dp"
             android:text="@string/page_live"/>
         
@@ -41,7 +41,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:background="@color/colorPrimary"/>
+        android:background="@color/colorLine0"/>
 
     <FrameLayout
         android:id="@+id/child_page"

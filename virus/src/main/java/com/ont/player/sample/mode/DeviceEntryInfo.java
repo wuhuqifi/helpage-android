@@ -8,7 +8,6 @@ public class DeviceEntryInfo {
     public String mDeviceId;
     public String mChannelId;
     public String mApiKey;
-    public String mLevel;
     public String mProtocol;
 
     public DeviceEntryInfo() {

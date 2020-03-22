@@ -70,7 +70,7 @@ public class PlayerActivity extends AppCompatActivity {
             actionBar.setTitle("OntPlayer");
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
-        //截图键
+
         mScreenshot = findViewById(R.id.screenshot_btn);
         mScreenshot.setOnClickListener(new View.OnClickListener() {
             @Override

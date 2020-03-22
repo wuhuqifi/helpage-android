@@ -31,20 +31,7 @@ public class Fragment_device extends BaseFragment implements IVDev {
     private TextView mState;
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
-        Log.e("WANG", "onDestroy");
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        Log.e("WANG", "onDetach");
-    }
-
-    @Override
     protected void initData() {
-        Log.e("WANG", "onCreate");
         //自动和UI主线程Looper关联
         mHandler = new Handler();
         mDevice = new Device("582307500","BnmwMdeApAZcy1Hk=CvLrB71otg=", "Oy9yltofYBvUWrh9");
@@ -59,7 +46,6 @@ public class Fragment_device extends BaseFragment implements IVDev {
     public Handler getHandler(){return mHandler;}
     @Override
     protected View initView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        Log.e("WANG", "onCreateView");
         View v = inflater.inflate(R.layout.frag_device, container, false);
         View device = v.findViewById(R.id.dev_layout);//设备布局
         mName = device.findViewById(R.id.tv_dev_name);
@@ -71,13 +57,11 @@ public class Fragment_device extends BaseFragment implements IVDev {
 
     @Override
     protected void initListener() {
-        Log.e("WANG", "onActivityCreated");
         mState.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), DevInfoActivity.class);
             startActivity(intent);
         });
         mLogo.setOnClickListener(v -> mPreDev.freshDev());//手动更新设备在线没
-       // mName.setOnClickListener(v -> mPreDev.login());
     }
 
     @Override
@@ -137,7 +121,7 @@ public class Fragment_device extends BaseFragment implements IVDev {
 //                 //创建对象，数组元素是null
 //                 ServiceInfo si = mServiceInfos[mServiceIndex] = new ServiceInfo();//得到当前设备的引用
 //                 si.parseServiceJsonString(s);//解析Json字符串，放入si中\
-//                 //TODO 图标
+//                 //
 //                 si.setIconID(R.drawable.dog);
 //
 //                 mList.add(mServiceIndex,si);

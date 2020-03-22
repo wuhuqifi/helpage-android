@@ -21,18 +21,17 @@
     <com.flyco.tablayout.SlidingTabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
-        android:layout_height="38dp"        />
-<!--        tl:tl_indicator_color="@color/colorActivatedLine"-->
-<!--        tl:tl_indicator_height="1dp"-->
-<!--        tl:tl_indicator_width="30dp"-->
-<!--        tl:tl_tab_space_equal="true"-->
-<!--        tl:tl_textsize="12dp"-->
-<!--        tl:tl_textSelectColor="@color/colorActivatedLine"-->
-<!--        tl:tl_textUnselectColor="@color/color_black0"-->
-<!--        tl:tl_underline_color="@color/colorLine0"-->
-<!--        tl:tl_underline_height="1px"-->
-<!--        tl:tl_underline_gravity="BOTTOM"-->
-
+        android:layout_height="38dp"
+        tl:tl_indicator_color="@color/colorActivatedLine"
+        tl:tl_indicator_height="1dp"
+        tl:tl_indicator_width="30dp"
+        tl:tl_tab_space_equal="true"
+        tl:tl_textsize="12dp"
+        tl:tl_textSelectColor="@color/colorActivatedLine"
+        tl:tl_textUnselectColor="@color/color_black0"
+        tl:tl_underline_color="@color/colorLine0"
+        tl:tl_underline_height="1px"
+        tl:tl_underline_gravity="BOTTOM"/>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"

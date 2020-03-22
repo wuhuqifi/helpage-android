@@ -1,4 +1,4 @@
-package com.example.helper.utils;
+package com;
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -10,27 +10,29 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import java.io.InputStream;
 
 public class ConfigManager {
+
     public static class base{
-        public static String datastream_url = "http://api.heclouds.com/devices/582307500/datastreams";
-        public static String devices_url = "http://api.heclouds.com/devices";
-        public static String master_key = "yVoa2=3t7c61aQOurpXYxSOZMls=";
-        public static String access_key = "DoJymtHrpq+3OY87eKATU38sRIjJaSJovZg9lWPBeLM=";
-        public static String api_key = "A13PYmB=V3jmt7cI2m9czRtpUmE=";
-        public static String device_id = "582307500";
-        //登陆参数
-        public static String register_url = "http://api.heclouds.com/register_de";
-        public static String register_code = "Oy9yltofYBvUWrh9";
         public static String product_id = "313858";
+        public static String master_key = "BnmwMdeApAZcy1Hk=CvLrB71otg=";
+        public static String device_id = "582307500";
+        public static String api_key = "A13PYmB=V3jmt7cI2m9czRtpUmE=";
+
+        public static String cmds_url = "https://api.heclouds.com/cmds";
+        public static String datastream_url = "https://api.heclouds.com/devices/582307500/datastreams";
+        public static String devices_url = "https://api.heclouds.com/devices";
+        //登陆参数
     }
     public static class video{
-        public static String master_key = "M0M1m2zdiVDhzQmBYp=RBuLlwxQ=";
-        public static String device_id = "583012656";
+        public static String master_key = "M0M1m2zdiVDhzQmBYp=RBuLIwxQ=";
+        public static String device_id = "588169375";
         public static String channel_id = "1";
-        public static String play_protocol = "0";
+
+        public static String API_URL = "https://api.heclouds.com/ipc/video";
+        public static String play_protocol = "0";//rtmp
         public static String play_level = "3";
     }
 
-    //以下代码由解析获得
+    //以下代码由解析获得 暂时没有到
     @Deprecated
     private final static String fileName = "config.xml";
     public static String getBaseConfig(Context context, String name){

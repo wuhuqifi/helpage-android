@@ -19,6 +19,7 @@ buildscript {
     }
 }
 
+
 allprojects {
     repositories {
         mavenCentral()
@@ -31,5 +32,6 @@ allprojects {
 }
 
 task clean(type: Delete) {
+    print("执行任务clean@project")
     delete rootProject.buildDir
 }

@@ -1,4 +1,4 @@
-package com;
+package com.example.helper.ui;
 
 import android.app.Application;
 import android.content.Context;

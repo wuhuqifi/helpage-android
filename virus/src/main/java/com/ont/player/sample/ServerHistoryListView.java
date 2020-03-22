@@ -155,8 +155,8 @@ public class ServerHistoryListView extends OntListView {
                     holder.txtTime.setText("时长: 7天循环录制");
                     holder.txtSize.setVisibility(View.GONE);
                     holder.txtTitle.setText("最近7天视频存储");
-                    Glide.with(getActivity()).load("").placeholder(R.drawable.ic_launcher_background).error(R.drawable.ic_launcher_background)
-                            .into(holder.img);
+                    //Glide.with(getActivity()).load("").placeholder(R.drawable.ic_launcher_background).error(RTMP.drawable.ic_launcher_background)
+                          //  .into(holder.img);
                 } else {
                     holder.txtTime.setText(info.getStart_time() + "-" + info.getEnd_time());
                     holder.txtSize.setVisibility(View.VISIBLE);

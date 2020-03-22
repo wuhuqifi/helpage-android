@@ -2,7 +2,7 @@ package com.example.helper.model
 
 import com.example.helper.base.IModel
 import com.example.helper.interfacee.model.IMDS
-import com.example.helper.utils.ConfigManager
+import com.ConfigManager
 import com.example.helper.utils.NetProxy.Companion.doRequest
 import okhttp3.Call
 import okhttp3.Callback

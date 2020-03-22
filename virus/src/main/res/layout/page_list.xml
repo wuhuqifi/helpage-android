@@ -28,6 +28,6 @@
         android:layout_height="match_parent"
         android:layout_marginLeft="13dp"
         android:layout_marginRight="13dp"
-        android:divider="@color/colorPrimary"
+        android:divider="@color/colorLine0"
         android:dividerHeight="1px"/>
 </RelativeLayout>

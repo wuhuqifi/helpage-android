@@ -3,11 +3,22 @@
     xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.example.helper">
 
-    <dist:module dist:instant="true" />
-    <uses-permission android:name="android.permission.INTERNET"/>
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- for Power -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.android.browser.permission.READ_BROWSER_COOKIES" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RAISED_THREAD_PRIORITY" />
+    <uses-permission android:name="android.permission.WRITE_SDCARD" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <application
-        android:name="com.CustemApp"
+        android:name=".ui.CustemApp"
         android:allowBackup="true"
         android:icon="@mipmap/chair"
         android:label="@string/app_name"
@@ -25,7 +36,10 @@
         <activity android:name=".ui.activity.MainActivity"></activity>
         <activity android:name=".ui.activity.PlusActivity"></activity>
         <activity android:name=".ui.activity.DevInfoActivity"></activity>
+        <activity android:name=".ui.activity.NotifyActivity"></activity>
+        <activity android:name=".ui.activity.AboutActivity"></activity>
         <activity android:name="com.ont.player.sample.PlayerActivity"></activity>
+
     </application>
 
 </manifest>

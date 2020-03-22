@@ -20,7 +20,7 @@ import android.widget.TextView;
 import com.example.helper.R;
 
 import org.xmlpull.v1.XmlPullParser;
-//TODO not USED yet
+// not USED yet
 public class PlayerView extends FrameLayout {
     private Context mContext;
     private SurfaceView mSurfaceView;

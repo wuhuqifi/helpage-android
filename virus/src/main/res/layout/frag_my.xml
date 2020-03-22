@@ -1,11 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/frag_back"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="frag_my" />
-</RelativeLayout>
+        android:paddingTop="10dp"
+        android:background="@color/fakeAppleBack"
+        android:text="产品信息"
+        android:typeface="sans" />
+
+    <com.example.helper.widget.FakeAppleListItemView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:desc="313858"
+        app:title="产品ID" />
+
+    <com.example.helper.widget.FakeAppleListItemView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:title="用户ID"
+        app:desc="139101"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:background="@color/fakeAppleBack"
+        android:text="设备信息"
+        android:typeface="sans" />
+
+    <com.example.helper.widget.FakeAppleListItemView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:title="设备名称"
+        app:desc="智能助老装置" />
+    <com.example.helper.widget.FakeAppleListItemView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:title="设备ID"
+        app:desc="582307500" />
+    <com.example.helper.widget.FakeAppleListItemView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:title="接入协议"
+        app:desc="MQTT" />
+    <com.example.helper.widget.FakeAppleListItemView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:title="视频协议"
+        app:desc="RTMP" />
+</LinearLayout>

@@ -34,7 +34,7 @@ public class PreDev implements IPDev {
 
             @Override
             public void onFailure(String err) {
-                Toast.makeText(((Fragment)mView).getContext(),err,Toast.LENGTH_SHORT).show();
+                //Toast.makeText(((Fragment)mView).getContext(),err,Toast.LENGTH_SHORT).show();
             }
         });
     }

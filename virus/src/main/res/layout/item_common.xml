@@ -22,7 +22,7 @@
         android:maxLines="2"
         android:ellipsize="end"
         android:textSize="14dp"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/color_black0"
         android:text="name" />
 
     <TextView
@@ -32,7 +32,7 @@
         android:layout_alignLeft="@id/txt_title"
         android:layout_alignBottom="@id/pic"
         android:textSize="9dp"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorText4"
         android:text="time" />
 
     <TextView
@@ -42,7 +42,7 @@
         android:layout_alignBottom="@+id/txt_desc"
         android:layout_alignParentRight="true"
         android:textSize="7dp"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorText4"
         android:text="size" />
 
 </RelativeLayout>

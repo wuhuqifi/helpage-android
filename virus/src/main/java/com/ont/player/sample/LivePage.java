@@ -58,7 +58,7 @@ public class LivePage extends FrameLayout {
 
         mContext = context;
 
-        // 加载布局 root传的LivePage是一个viewgrounp
+        // 加载布局
         LayoutInflater.from(context).inflate(R.layout.page_live, this);
         mEdtUrl = findViewById(R.id.edt_url);
         mRadioGroupProtocol = findViewById(R.id.radio_group_protocol);
@@ -73,14 +73,13 @@ public class LivePage extends FrameLayout {
                     Toast.makeText(mContext, mContext.getString(R.string.tip_input_setting), Toast.LENGTH_SHORT).show();
                     return;
                 }
-                //更新服务器的清晰度参数
+
                 updateLevel(mDeviceEntryInfo.mApiKey, mDeviceEntryInfo.mDeviceId, mDeviceEntryInfo.mChannelId, getCheckedLevel());
-                //获取播放地址
                 PlayUrlRequest request = new PlayUrlRequest(mDeviceEntryInfo.mApiKey)
-                        .setIs_live(true)//直播页面应当是true
+                        .setIs_live(true)
                         .setChannel_id(mDeviceEntryInfo.mChannelId)
                         .setDevice_id(mDeviceEntryInfo.mDeviceId)
-                        .setProtocol_type(getCheckedProtocol())//设置播放协议
+                        .setProtocol_type(getCheckedProtocol())
                         .setRequest_listener(new IDataListener() {
 
                             @Override

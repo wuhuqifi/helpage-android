@@ -12,6 +12,7 @@
             android:layout_height="match_parent">
 
             <com.example.helper.widget.CornerTextView
+                android:layout_marginTop="20dp"
                 style="@style/BlueCornerText"
                 android:text="智能助老装置"
                 android:textSize="@dimen/big_text"
@@ -43,27 +44,6 @@
                 android:layout_marginVertical="2dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="@dimen/marginAll"
-                    android:textSize="100sp"
-                    android:text="@string/app_name"
-                    android:layout_weight="1"/>
-                <TextView
-                    android:textSize="100sp"
-                    android:layout_margin="@dimen/marginAll"
-                    android:text="@string/app_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"/>
-            </LinearLayout>
-
 
         </LinearLayout>
 

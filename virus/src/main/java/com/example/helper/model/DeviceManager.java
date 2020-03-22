@@ -5,7 +5,7 @@ import android.util.Log;
 import com.example.helper.beans.Device;
 import com.example.helper.interfacee.model.IMDev;
 import com.example.helper.interfacee.presenter.IPDev;
-import com.example.helper.utils.ConfigManager;
+import com.ConfigManager;
 import com.example.helper.utils.NetProxy;
 
 import org.jetbrains.annotations.NotNull;

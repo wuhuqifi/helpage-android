@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 import com.example.helper.R;
 import com.example.helper.base.BaseFragment;
 
-public class Fragment_my extends Fragment {
-    @Nullable
+public class Fragment_my extends BaseFragment {
+
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    protected View initView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.frag_my,container,false);
     }
 

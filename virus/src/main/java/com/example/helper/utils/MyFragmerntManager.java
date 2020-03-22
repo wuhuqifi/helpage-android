@@ -40,8 +40,4 @@ public class MyFragmerntManager {
         transaction.replace(fragment_container_id, fragment);
         transaction.commitAllowingStateLoss ();//提交事务
     }
-
-    public static void shiftFragment(int fragment_container_id, Fragment fragment){
-        //TODO
-    }
 }
