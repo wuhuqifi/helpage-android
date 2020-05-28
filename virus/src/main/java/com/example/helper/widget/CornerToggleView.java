@@ -24,11 +24,11 @@ public class CornerToggleView extends android.support.v7.widget.AppCompatTextVie
     //属性
     private int CTVcornerSize;
     private int CTVbackground;
-    private Bitmap CTVbuttonON;
-    private Bitmap CTVbuttonOFF;
-    private Bitmap CTVbuttonCurrent;
+    public Bitmap CTVbuttonON;
+    public Bitmap CTVbuttonOFF;
+    public Bitmap CTVbuttonCurrent;
     //button标志
-    boolean isBtnON = false;
+    public boolean isBtnON = false;
     //全局画布
     Canvas mCanvas;
     public CornerToggleView(Context context) {
@@ -95,16 +95,6 @@ public class CornerToggleView extends android.support.v7.widget.AppCompatTextVie
 
 
     private void onClick(View v) {
-        if (isBtnON) {
-            Toast.makeText(getContext(), "关", Toast.LENGTH_SHORT).show();
-            CTVbuttonCurrent = CTVbuttonOFF;
-            invalidate();
-            isBtnON = false;
-        } else {
-            Toast.makeText(getContext(), "开", Toast.LENGTH_SHORT).show();
-            CTVbuttonCurrent = CTVbuttonON;
-            invalidate();
-            isBtnON = true;
-        }
+
     }
 }

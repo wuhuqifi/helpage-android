@@ -30,18 +30,28 @@
                 <include layout="@layout/data_view_temp"/>
                 <include layout="@layout/data_view_humi"/>
             </LinearLayout>
-            <include layout="@layout/drug"/>
-            <include layout="@layout/sleep"/>
-            <include layout="@layout/brush"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <include layout="@layout/data_view_smoke"/>
+                <include layout="@layout/data_view_pictiue"/>
+            </LinearLayout>
+            <include layout="@layout/drug" />
+
+            <include layout="@layout/sleep" />
+
+            <include layout="@layout/brush" />
 
             <TextView
                 android:id="@+id/tv_camera"
+                android:layout_marginBottom="20dp"
                 android:textSize="@dimen/big_text"
                 android:text="打开摄像头"
                 android:background="@color/text_background"
                 android:textColor="@color/textGreen"
                 android:gravity="center"
-                android:layout_marginVertical="2dp"
+                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 

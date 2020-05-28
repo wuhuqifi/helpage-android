@@ -44,7 +44,7 @@ public class SplashActivity extends AppCompatActivity implements ViewPropertyAni
         mImageView.setScaleType(ImageView.ScaleType.MATRIX);
 
         //设置动画缩放
-        ViewCompat.animate(mImageView).scaleX(1f).scaleY(1f).setDuration(1000).setListener(this);
+        ViewCompat.animate(mImageView).scaleX(1f).scaleY(1f).setDuration(10).setListener(this);
     }
 
     @Override

@@ -1,8 +1,10 @@
 package com.example.helper.utils
 
+import android.util.Log
 import com.ConfigManager
 import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import java.io.IOException
 import java.net.URI.create
 
 
@@ -37,6 +39,48 @@ class NetProxy {
                     .build()
             doRequest(request,callback)
         }
+        //目前只要data这一个主题 内容必须是json
+        fun sendTopic( topic:String,json:String,callback: Callback) {
+            var url = "http://api.heclouds.com/mqtt"
+            url += "?";
+            url += "topic="+topic
+            val JSON = "application/json; charset=utf-8".toMediaTypeOrNull()
+            val body: RequestBody = RequestBody.create(JSON, json)
+            val request = Request.Builder()
+                    .url(url)
+                    .method("POST",body)
+                    .header("api-key",ConfigManager.base.master_key)
+                    .build()
+            doRequest(request,callback)
+        }
+
+        fun sendTopicWithoutCallback( topic:String,json:String){
+            sendTopic(topic,json,object:Callback{
+                override fun onFailure(call: Call, e: IOException) {
+                }
+
+                override fun onResponse(call: Call, response: Response) {
+                   // Log.e("WANG",response.body?.string())
+                }
+            })
+        }
+
+        fun queryDP(name:String,callback: Callback){
+            var url = " http://api.heclouds.com/devices/"
+            var device_id = ConfigManager.base.device_id
+            var datastream_id = name
+            url += device_id;
+            url += "/datastreams/"
+            url += datastream_id
+            val request = Request.Builder()
+                    .url(url)
+                    .method("GET",null)
+                    .header("api-key",ConfigManager.base.master_key)
+                    .build()
+            doRequest(request,callback)
+        }
     }
+
+
 
 }

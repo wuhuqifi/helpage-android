@@ -12,7 +12,7 @@
     <!--全屏主题-->
     <style name="FullScreen" parent="AppTheme">
         <item name="windowNoTitle">true</item>
-        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowFullscreen">false</item>
         <!--修改全局字体-->>
         <item name="android:typeface">sans</item>
     </style>

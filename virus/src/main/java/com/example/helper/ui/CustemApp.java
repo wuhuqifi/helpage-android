@@ -21,7 +21,6 @@ public class CustemApp extends Application {
 
     private void setFont() {
         gTypeface = Typeface.createFromAsset(getAssets(),"fonts/hanbuger.ttf");
-
         try {
             //反射
             Field field = Typeface.class.getDeclaredField("SANS_SERIF");
@@ -30,6 +29,5 @@ public class CustemApp extends Application {
         }catch (Exception e){
             e.printStackTrace();
         }
-
     }
 }

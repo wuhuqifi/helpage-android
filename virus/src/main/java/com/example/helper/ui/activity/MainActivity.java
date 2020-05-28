@@ -84,12 +84,15 @@ public class MainActivity extends BaseActivity implements KeyEvent.Callback {
                 case R.id.left_navi_item_1:
                     Intent intent1 = new Intent(this, NotifyActivity.class);
                     startActivity(intent1);
+                    break;
                 case R.id.left_navi_item_2:
                     Intent intent2 = new Intent(this, AboutActivity.class);
                     startActivity(intent2);
+                    break;
                 case R.id.left_navi_item_3:
                     //TODO 这里不知道为什么吐不了
                     Toast.makeText(MainActivity.this, "暂时未实现", Toast.LENGTH_SHORT);
+                    Log.e("WANG", "initListener: " );
                     break;
                 case R.id.left_navi_item_4:
                     Toast.makeText(MainActivity.this, "中文", Toast.LENGTH_SHORT);

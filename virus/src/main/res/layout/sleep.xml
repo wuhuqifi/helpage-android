@@ -6,6 +6,7 @@
     android:orientation="horizontal"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <com.example.helper.widget.IconImgView
+
         android:layout_marginVertical="@dimen/margin_ver"
         app:IIVcornerSize="@dimen/corner_size"
         app:IIVtextBackground="@color/text_background"
@@ -14,6 +15,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"/>
     <com.example.helper.widget.CornerToggleView
+        android:id="@+id/ctv_sleep"
         android:layout_marginVertical="@dimen/margin_ver"
         android:paddingLeft="@dimen/left_padding"
         android:layout_marginLeft="20dp"

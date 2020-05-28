@@ -64,8 +64,8 @@ public class FakeAppleListItemView extends View {
     protected void onDraw(Canvas canvas) {
         int w = getMeasuredWidth();
         int h = getMeasuredHeight();
-        float paddingToLeft = w*0.1f;
-        float paddingToRight = w*0.1f;
+        float paddingToLeft = w*0.05f;
+        float paddingToRight = w*0.05f;
         float titleSize = h*0.5f;
         float descSize = h*0.4f;
 

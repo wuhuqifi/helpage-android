@@ -14,6 +14,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"/>
     <com.example.helper.widget.CornerToggleView
+        android:id="@+id/ctv_drug"
         android:layout_marginVertical="@dimen/margin_ver"
         android:paddingLeft="@dimen/left_padding"
         android:layout_marginLeft="20dp"

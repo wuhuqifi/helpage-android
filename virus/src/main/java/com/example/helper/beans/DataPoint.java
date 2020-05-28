@@ -7,8 +7,6 @@ public class DataPoint {
     private String id;
     private String current_value;//String Int JsonObject
     private String update_at;
-    String unit;
-    String unit_symbol;
     public DataPoint(){
     }
     public void parseDataPoint(String Json){
@@ -36,7 +34,7 @@ public class DataPoint {
         this.id = id;
     }
 
-    public Object getCurrent_value() {
+    public String getCurrent_value() {
         if (current_value == null) {
             return "null";
         }

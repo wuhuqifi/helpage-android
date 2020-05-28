@@ -117,4 +117,8 @@ public class DataView extends View {
     public void setNumber(String data) {
         mWHQNumber = data;
     }
+
+    public String getmWHQNumber() {
+        return mWHQNumber;
+    }
 }
