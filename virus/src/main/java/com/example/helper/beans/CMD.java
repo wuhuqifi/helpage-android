@@ -1,11 +1,10 @@
 package com.example.helper.beans;
 
-import android.arch.lifecycle.MediatorLiveData;
-import android.support.annotation.VisibleForTesting;
+import androidx.lifecycle.MediatorLiveData;
+import androidx.annotation.VisibleForTesting;
 import android.util.Log;
 
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 
@@ -16,7 +15,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-import okio.BufferedSink;
 
 public class CMD {
     private String cmd_uuid;//全平台唯一

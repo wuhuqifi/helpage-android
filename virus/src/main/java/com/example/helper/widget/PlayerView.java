@@ -2,13 +2,12 @@ package com.example.helper.widget;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
-import android.support.v4.view.ViewPager;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.SurfaceHolder;
@@ -19,7 +18,6 @@ import android.widget.TextView;
 
 import com.example.helper.R;
 
-import org.xmlpull.v1.XmlPullParser;
 // not USED yet
 public class PlayerView extends FrameLayout {
     private Context mContext;

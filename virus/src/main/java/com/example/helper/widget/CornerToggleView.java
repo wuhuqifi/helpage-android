@@ -9,18 +9,13 @@ import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.RectF;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.helper.R;
-import com.example.helper.ui.activity.MainActivity;
 
-public class CornerToggleView extends android.support.v7.widget.AppCompatTextView{
+public class CornerToggleView extends androidx.appcompat.widget.AppCompatTextView{
     //属性
     private int CTVcornerSize;
     private int CTVbackground;

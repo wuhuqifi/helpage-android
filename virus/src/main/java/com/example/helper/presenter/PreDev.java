@@ -1,6 +1,6 @@
 package com.example.helper.presenter;
 
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.widget.Toast;
 
 import com.example.helper.beans.Device;

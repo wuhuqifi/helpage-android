@@ -4,9 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
-import android.support.annotation.AttrRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.AttrRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -28,7 +28,6 @@ import com.ont.media.player.util.BatteryReceiver;
 import com.ont.media.player.util.L;
 import com.ont.media.player.util.WindowUtil;
 import com.ont.media.player.widget.MarqueeTextView;
-import com.ont.player.sample.PlayerActivity;
 
 
 /**

@@ -1,22 +1,15 @@
 package com.example.helper.widget;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.example.helper.R;
 import com.example.helper.ui.CustemApp;
-
-import org.w3c.dom.Text;
 
 public class FakeAppleListItemView extends View {
     private String title;

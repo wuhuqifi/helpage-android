@@ -1,22 +1,18 @@
 package com.example.helper.ui.activity;
 
 import android.os.Handler;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
-import android.widget.TextView;
 
 import com.example.helper.R;
 import com.example.helper.adapter.DevInfoAdapter;
 import com.example.helper.base.BaseActivity;
-import com.example.helper.beans.DataPoint;
 import com.example.helper.beans.DataStreams;
 import com.example.helper.interfacee.presenter.IPDS;
 import com.example.helper.interfacee.view.IVDS;
 import com.example.helper.presenter.PreDS;
-import com.example.helper.widget.FakeAppleListItemView;
 
-import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 

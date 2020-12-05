@@ -1,8 +1,8 @@
 package com.example.helper.adapter;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +11,6 @@ import com.example.helper.R;
 import com.example.helper.beans.DataPoint;
 import com.example.helper.beans.DataStreams;
 import com.example.helper.widget.FakeAppleListItemView;
-
-import java.util.zip.Inflater;
 
 public class DevInfoAdapter extends RecyclerView.Adapter<DevInfoAdapter.ViewHolder> {
     private DataStreams mModel;

@@ -1,21 +1,12 @@
 package com.ont.player.sample.controller;
 
-import android.Manifest;
 import android.content.Context;
-import android.content.pm.PackageManager;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import android.util.AttributeSet;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
-
-
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by betali on 2018/5/2.

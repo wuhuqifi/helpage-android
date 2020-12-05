@@ -10,7 +10,7 @@ import android.util.Log;
 
 import com.example.helper.R;
 
-public class CornerTextView extends android.support.v7.widget.AppCompatTextView {
+public class CornerTextView extends androidx.appcompat.widget.AppCompatTextView {
     private float mCornerSize;//圆角大小
     private int mTextBackground;//背景颜色
 
