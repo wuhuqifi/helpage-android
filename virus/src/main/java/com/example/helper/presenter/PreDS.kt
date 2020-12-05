@@ -14,7 +14,7 @@ class PreDS : IPDS {
 
     override fun fresh() {
         mModel.getData("args", object : CallBack{
-            override fun onFailure(err: String?) {
+            override fun onFailure(err: String) {
                 Log.e("WANG",err)
             }
 

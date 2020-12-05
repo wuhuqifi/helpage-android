@@ -44,9 +44,9 @@ class PlayActivity: BaseActivity() {
         }
     }
     fun getSharedPer(): Boolean {
-        device_id = mPlayParm.getString("device_id","")
-        channel_id = mPlayParm.getString("channel_id","")
-        video_master_key = mPlayParm.getString("video_master_key","")
+        device_id = mPlayParm.getString("device_id","").toString()
+        channel_id = mPlayParm.getString("channel_id","").toString()
+        video_master_key = mPlayParm.getString("video_master_key","").toString()
         if (video_master_key == "")
             //说明是第一次创建
             return false
